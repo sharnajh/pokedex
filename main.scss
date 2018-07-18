@@ -1,0 +1,38 @@
+body {
+    background-color: #f4e861;
+    font-family: sans-serif;
+        #gameboy {
+            width:330px;
+            height:560px;
+            padding:15px;
+            background-color:#f1205c;
+            border-radius:20px;
+            border-bottom-right-radius: 90px;
+            margin:auto;
+            box-shadow:15px 0px #a1bc00;
+                #screen-wrapper {
+                    background-color:black;
+                    margin:auto;
+                    width:330px;
+                    height:320px;
+                    border-radius:15px;
+                    border-bottom-right-radius: 50px;
+                    border-bottom-left-radius: 50px;
+                    display:flex;
+                    flex-direction:column;
+                    justify-content:center;
+                        #screen {
+                            background-color:darkgray;
+                            width: 240px;
+                            height:240px;
+                            margin:auto;
+                        }
+                        #logo {
+                            color:white;
+                            text-align:center;
+                            margin:0;
+                            margin-bottom:18px;
+                        }
+                }
+        }
+}
