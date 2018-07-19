@@ -4,7 +4,8 @@
 body {
   background-color: #FAEF61;
   font-family: pkmn, sans-serif;
-  margin: 0; }
+  margin: 0;
+  color: #161555; }
   body #canvas {
     width: 100%;
     display: flex;
@@ -41,6 +42,43 @@ body {
           justify-content: center;
           flex-direction: column;
           align-content: center; }
+          body #canvas #gameboy #screen-wrapper #screen #mew, body #canvas #gameboy #screen-wrapper #screen #gengar, body #canvas #gameboy #screen-wrapper #screen #clefairy {
+            width: 240px;
+            height: 230px;
+            background-color: #18D4F8;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 10px;
+            align-items: center;
+            font-size: 12px; }
+            body #canvas #gameboy #screen-wrapper #screen #mew ul, body #canvas #gameboy #screen-wrapper #screen #mew li, body #canvas #gameboy #screen-wrapper #screen #gengar ul, body #canvas #gameboy #screen-wrapper #screen #gengar li, body #canvas #gameboy #screen-wrapper #screen #clefairy ul, body #canvas #gameboy #screen-wrapper #screen #clefairy li {
+              padding: 0;
+              list-style: none; }
+            body #canvas #gameboy #screen-wrapper #screen #mew .sprite, body #canvas #gameboy #screen-wrapper #screen #gengar .sprite, body #canvas #gameboy #screen-wrapper #screen #clefairy .sprite {
+              width: auto;
+              max-width: 150px;
+              height: auto;
+              max-height: 100px;
+              margin: 0;
+              background-color: #01B6D5;
+              border-radius: 5px; }
+            body #canvas #gameboy #screen-wrapper #screen #mew .pkmn-name, body #canvas #gameboy #screen-wrapper #screen #mew .id, body #canvas #gameboy #screen-wrapper #screen #gengar .pkmn-name, body #canvas #gameboy #screen-wrapper #screen #gengar .id, body #canvas #gameboy #screen-wrapper #screen #clefairy .pkmn-name, body #canvas #gameboy #screen-wrapper #screen #clefairy .id {
+              font-size: 17px;
+              text-transform: uppercase;
+              background-color: #01B6D5;
+              border-radius: 5px;
+              padding: 5px;
+              margin: 10px;
+              width: 100px;
+              text-align: center; }
+            body #canvas #gameboy #screen-wrapper #screen #mew .ability, body #canvas #gameboy #screen-wrapper #screen #gengar .ability, body #canvas #gameboy #screen-wrapper #screen #clefairy .ability {
+              text-transform: capitalize;
+              background-color: #01B6D5;
+              border-radius: 5px;
+              padding: 5px; }
+            body #canvas #gameboy #screen-wrapper #screen #mew #base-stats li, body #canvas #gameboy #screen-wrapper #screen #gengar #base-stats li, body #canvas #gameboy #screen-wrapper #screen #clefairy #base-stats li {
+              background-color: #01B6D5;
+              border-radius: 5px; }
           body #canvas #gameboy #screen-wrapper #screen #start-button {
             margin: auto;
             padding: 10px;
