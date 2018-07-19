@@ -3,15 +3,16 @@
   src: url("pkmnred.ttf"); }
 body {
   background-color: #FAEF61;
-  font-family: pkmn, sans-serif; }
+  font-family: pkmn, sans-serif;
+  margin: 0; }
   body #canvas {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center; }
     body #canvas #gameboy {
-      width: 310px;
-      height: 545px;
+      width: 360px;
+      height: 580px;
       padding: 15px;
       background-color: #FE1B53;
       border-radius: 20px;
@@ -46,6 +47,8 @@ body {
             font-size: 12px;
             border: 2px solid;
             background-color: #F8E8F8; }
+          body #canvas #gameboy #screen-wrapper #screen #start-button:hover {
+            cursor: pointer; }
         body #canvas #gameboy #screen-wrapper #logo {
           color: white;
           text-align: center;
@@ -67,6 +70,8 @@ body {
             height: 30px;
             background-color: #161555;
             box-shadow: 2px 2px #441849; }
+          body #canvas #gameboy #controls #button-pad .button:hover {
+            cursor: pointer; }
           body #canvas #gameboy #controls #button-pad #up {
             border-top-left-radius: 8px;
             border-top-right-radius: 8px;
@@ -90,17 +95,17 @@ body {
           body #canvas #gameboy #controls #button-pad .empty {
             width: 30px;
             height: 30px; }
-        body #canvas #gameboy #controls #container {
+        body #canvas #gameboy #controls #ab-container {
           display: flex;
           justify-content: space-between;
-          width: 100px;
+          width: 115px;
           border-radius: 30px;
           background-color: #CB225D;
           padding: 10px;
-          height: 40px;
+          height: 60px;
           transform: rotate(-20deg);
           margin: 10px; }
-          body #canvas #gameboy #controls #container .ab-button {
+          body #canvas #gameboy #controls #ab-container .ab-button {
             width: 40px;
             height: 40px;
             border-radius: 40px;
@@ -109,5 +114,7 @@ body {
             font-family: Arial, Helvetica, sans-serif;
             box-shadow: 2px 2px #441849;
             border-right: 1px #FB9275 solid; }
+          body #canvas #gameboy #controls #ab-container .ab-button:hover {
+            cursor: pointer; }
 
 /*# sourceMappingURL=main.css.map */
