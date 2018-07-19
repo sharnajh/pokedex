@@ -8,9 +8,10 @@ let start = document.getElementById("start-button");
 
 canvas.style.height = `${myHeight}px`;
 
+
 let mew = document.getElementById("mew"),
 gengar = document.getElementById("gengar"),
-clefairy = document.getElementById("clefairy");s
+clefairy = document.getElementById("clefairy");
 
 // mew vars
 axios.get('https://pokeapi-nycda.firebaseio.com/pokemon/151.json').then((response) => {
@@ -23,6 +24,20 @@ axios.get('https://pokeapi-nycda.firebaseio.com/pokemon/151.json').then((respons
     let mewAttk = mewData.stats[4].base_stat;
     let mewDef = mewData.stats[3].base_stat;
     console.log(mewData);
+
+    mew.insertAdjacentHTML('afterbegin',`
+    <img class="sprite" src="${mewSprite}">
+    <ul>
+    <li><h1 class="pkmn-name">${mewName}<h1></li>
+    <li><h1 class="id">#${mewId}</h1></li>
+    </ul>
+    <p class="ability">Ability: ${mewAbility}</p>
+    <ul id="base-stats">
+    <li><p class="hp">HP: ${mewHp}</p></li>
+    <li><p class="attk">Attack: ${mewAttk}</p></li>
+    <li><p class="def">Defense: ${mewDef}</p></li>
+    </ul>
+    `)
 });
 
 // gengar vars
@@ -36,6 +51,18 @@ axios.get('https://pokeapi-nycda.firebaseio.com/pokemon/94.json').then((response
     let gengarAttk = gengarData.stats[4].base_stat;
     let gengarDef = gengarData.stats[3].base_stat;
     console.log(gengarData);
+
+    gengar.insertAdjacentHTML('afterbegin',`
+    <img class="sprite" src="${gengarSprite}">
+    <h1 class="pkmn-name">${gengarName}<h1>
+    <h1 class="id">#${gengarId}</h1>
+    <p class="ability">Ability: ${gengarAbility}</p>
+    <ul>
+    <li><p class="hp">HP: ${gengarHp}</p></li>
+    <li><p class="attk">Attack: ${gengarAttk}</p></li>
+    <li><p class="def">Defense: ${gengarDef}</p></li>
+    </ul>
+    `)
 });
 
 // clefaity vars
@@ -49,5 +76,20 @@ axios.get('https://pokeapi-nycda.firebaseio.com/pokemon/35.json').then((response
     let clefAttk = clefData.stats[4].base_stat;
     let clefDef = clefData.stats[3].base_stat;
     console.log(clefData);
+
+    clefairy.insertAdjacentHTML('afterbegin',`
+    <img class="sprite" src="${clefSprite}">
+    <h1 class="pkmn-name">${clefName}<h1>
+    <h1 class="id">#${clefId}</h1>
+    <p class="ability">Ability: ${clefAbility}</p>
+    <p class="hp">HP: ${clefHp}</p>
+    <p class="attk">Attack: ${clefAttk}</p>
+    <p class="def">Defense: ${clefDef}</p>
+    `)
 });
 
+$(document).ready(function(){
+    $("#start-button").click(function(){
+        $("#mew").show();
+    });
+});

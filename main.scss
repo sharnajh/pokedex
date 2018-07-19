@@ -8,6 +8,7 @@ $black: #161555;
 $yellow: #FAEF61;
 $red: #FE1B53;
 $blue: #18D4F8;
+$dark-blue: #01B6D5;
 $dark-red: #441849;
 $other-red: #CB225D;
 $light-red: #FB9275;
@@ -16,6 +17,7 @@ body {
     background-color: $yellow;
     font-family: pkmn, sans-serif;
     margin:0;
+    color:$black;
     #canvas {
         width: 100%;
         display:flex;
@@ -52,6 +54,51 @@ body {
                             justify-content: center;
                             flex-direction: column;
                             align-content:center;
+                            #mew, #gengar, #clefairy {
+                                width:240px;
+                                height:230px;
+                                background-color:$blue;
+                                display:flex;
+                                flex-wrap:wrap;
+                                padding:10px;
+                                align-items:center;
+                                font-size:12px;
+                                    ul, li {
+                                        padding:0;
+                                        list-style: none;
+                                    }
+                                    .sprite {
+                                        width: auto;
+                                        max-width: 150px;
+                                        height: auto;
+                                        max-height: 100px;
+                                        margin:0;
+                                        background-color:$dark-blue;
+                                        border-radius:5px;
+                                    }
+                                    .pkmn-name, .id {
+                                        font-size:17px;
+                                        text-transform:uppercase;
+                                        background-color:$dark-blue;
+                                        border-radius:5px;
+                                        padding:5px;
+                                        margin:10px;
+                                        width: 100px;
+                                        text-align: center;
+                                    }
+                                    .ability {
+                                        text-transform:capitalize;
+                                        background-color:$dark-blue;
+                                        border-radius:5px;
+                                        padding:5px;
+                                    }
+                                    #base-stats {
+                                            li {
+                                                background-color:$dark-blue;
+                                                border-radius:5px; 
+                                            }
+                                    }
+                            }
                                 #start-button {
                                     margin:auto;
                                     padding:10px;
@@ -147,4 +194,6 @@ body {
                         }
                 }
         }
-}}
+}
+        
+}
