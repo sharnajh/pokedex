@@ -25,20 +25,29 @@ axios.get('https://pokeapi-nycda.firebaseio.com/pokemon/151.json').then((respons
     let mewDef = mewData.stats[3].base_stat;
     console.log(mewData);
 
-    mew.insertAdjacentHTML('afterbegin',`
-    <img class="sprite" src="${mewSprite}">
-    <ul>
-    <li><h1 class="pkmn-name">${mewName}<h1></li>
+    mew.insertAdjacentHTML('beforeend',`
+    <div class="container">
+    <div class="row">
+        <div class="col-sm-2"><img class="sprite" src="${mewSprite}"></div>
+        <div class="col-sm-5"><ul>
+    <li><h1 class="pkmn-name">${mewName}</h1></li>
     <li><h1 class="id">#${mewId}</h1></li>
-    </ul>
-    <p class="ability">Ability: ${mewAbility}</p>
-    <ul id="base-stats">
-    <li><p class="hp">HP: ${mewHp}</p></li>
-    <li><p class="attk">Attack: ${mewAttk}</p></li>
-    <li><p class="def">Defense: ${mewDef}</p></li>
-    </ul>
+    </ul></div>
+    </div>
+    <div class="row">
+        <div class="col-md-12"><p class="ability"><b>Ability:</b> ${mewAbility}</p></div>
+    </div>
+    <div class="row">
+        <div class="col-md-12"><ul id="base-stats">
+    <li><p class="hp"><b>HP:</b> ${mewHp}</p></li>
+    <li><p class="attk"><b>Attack:</b> ${mewAttk}</p></li>
+    <li><p class="def"><b>Defense:</b> ${mewDef}</p></li>
+    </ul></div>
+    </div>
+    </div>
     `)
 });
+
 
 // gengar vars
 axios.get('https://pokeapi-nycda.firebaseio.com/pokemon/94.json').then((response) => {
@@ -52,18 +61,30 @@ axios.get('https://pokeapi-nycda.firebaseio.com/pokemon/94.json').then((response
     let gengarDef = gengarData.stats[3].base_stat;
     console.log(gengarData);
 
-    gengar.insertAdjacentHTML('afterbegin',`
-    <img class="sprite" src="${gengarSprite}">
-    <h1 class="pkmn-name">${gengarName}<h1>
-    <h1 class="id">#${gengarId}</h1>
-    <p class="ability">Ability: ${gengarAbility}</p>
-    <ul>
-    <li><p class="hp">HP: ${gengarHp}</p></li>
-    <li><p class="attk">Attack: ${gengarAttk}</p></li>
-    <li><p class="def">Defense: ${gengarDef}</p></li>
-    </ul>
+    gengar.insertAdjacentHTML('beforeend',`
+    <div class="container">
+    <div class="row">
+        <div class="col-sm-2"><img class="sprite" src="${gengarSprite}"></div>
+        <div class="col-sm-5"><ul>
+    <li><h1 class="pkmn-name">${gengarName}</h1></li>
+    <li><h1 class="id">#${gengarId}</h1></li>
+    </ul></div>
+    </div>
+    <div class="row">
+        <div class="col-md-12"><p class="ability"><b>Ability:</b> ${gengarAbility}</p></div>
+    </div>
+    <div class="row">
+        <div class="col-md-12"><ul id="base-stats">
+    <li><p class="hp"><b>HP:</b> ${gengarHp}</p></li>
+    <li><p class="attk"><b>Attack:</b> ${gengarAttk}</p></li>
+    <li><p class="def"><b>Defense:</b> ${gengarDef}</p></li>
+    </ul></div>
+    </div>
+    </div>
     `)
 });
+
+
 
 // clefaity vars
 axios.get('https://pokeapi-nycda.firebaseio.com/pokemon/35.json').then((response) => {
@@ -77,14 +98,26 @@ axios.get('https://pokeapi-nycda.firebaseio.com/pokemon/35.json').then((response
     let clefDef = clefData.stats[3].base_stat;
     console.log(clefData);
 
-    clefairy.insertAdjacentHTML('afterbegin',`
-    <img class="sprite" src="${clefSprite}">
-    <h1 class="pkmn-name">${clefName}<h1>
-    <h1 class="id">#${clefId}</h1>
-    <p class="ability">Ability: ${clefAbility}</p>
-    <p class="hp">HP: ${clefHp}</p>
-    <p class="attk">Attack: ${clefAttk}</p>
-    <p class="def">Defense: ${clefDef}</p>
+    clefairy.insertAdjacentHTML('beforeend',`
+    <div class="container">
+    <div class="row">
+        <div class="col-sm-2"><img class="sprite" src="${clefSprite}"></div>
+        <div class="col-sm-5"><ul>
+    <li><h1 class="pkmn-name">${clefName}</h1></li>
+    <li><h1 class="id">#${clefId}</h1></li>
+    </ul></div>
+    </div>
+    <div class="row">
+        <div class="col-md-12"><p class="ability"><b>Ability:</b> ${clefAbility}</p></div>
+    </div>
+    <div class="row">
+        <div class="col-md-12"><ul id="base-stats">
+    <li><p class="hp"><b>HP:</b> ${clefHp}</p></li>
+    <li><p class="attk"><b>Attack:</b> ${clefAttk}</p></li>
+    <li><p class="def"><b>Defense:</b> ${clefDef}</p></li>
+    </ul></div>
+    </div>
+    </div>
     `)
 });
 
@@ -93,7 +126,32 @@ $( "#start-button" ).click(function() {
     $('#start').toggle();
  });
 
- $( "#pokedex-select" ).click(function() {     
+ $( "#mew-select" ).click(function() {     
     $('#mew').toggle("slow");
     $('#menu').toggle();
+ });
+
+ $( "#gengar-select" ).click(function() {     
+    $('#gengar').toggle("slow");
+    $('#menu').toggle();
+ });
+
+ $( "#clefairy-select" ).click(function() {     
+    $('#clefairy').toggle("slow");
+    $('#menu').toggle();
+ });
+
+ $( "#m-exit" ).click(function() {  
+    $('#mew').toggle();  
+    $('#menu').toggle("slow");
+ });
+
+ $( "#g-exit" ).click(function() {  
+    $('#gengar').toggle();  
+    $('#menu').toggle("slow");
+ });
+
+ $( "#c-exit" ).click(function() {  
+    $('#clefairy').toggle();  
+    $('#menu').toggle("slow");
  });
