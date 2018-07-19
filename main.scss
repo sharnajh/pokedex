@@ -3,21 +3,34 @@
     src:url('pkmnred.ttf');
 }
 
+// color-scheme
+$black: #161555;
+$yellow: #FAEF61;
+$red: #FE1B53;
+$blue: #18D4F8;
+$dark-red: #441849;
+$other-red: #CB225D;
+$light-red: #FB9275;
+
 body {
-    background-color: #FAEF61;
+    background-color: $yellow;
     font-family: pkmn, sans-serif;
+    #canvas {
+        width: 100%;
+        display:flex;
+        justify-content: center;
+        align-items:center;
         #gameboy {
             width:310px;
             height:545px;
             padding:15px;
-            background-color:#FE1B53;
+            background-color:$red;
             border-radius:20px;
             border-bottom-right-radius: 90px;
-            border-right:	#441849 solid 15px;
-            margin:auto;
-            box-shadow:0px 15px 	#441849, 15px 0px 	#81C148;
+            border-right:	$dark-red solid 15px;
+            box-shadow:0px 15px 	$dark-red, 15px 0px 	#81C148;
                 #screen-wrapper {
-                    background-color:#161555;
+                    background-color:$black;
                     margin:auto;
                     width:310px;
                     height:310px;
@@ -29,9 +42,22 @@ body {
                     justify-content:center;
                         #screen {
                             background-color:#18D4F8;
+                            background-image: url('red.gif');
+                            background-size:100%;
                             width: 240px;
-                            height:240px;
+                            height:230px;
                             margin:auto;
+                            display:flex;
+                            justify-content: center;
+                            flex-direction: column;
+                            align-content:center;
+                                #start-button {
+                                    margin:auto;
+                                    padding:10px;
+                                    font-size:12px;
+                                    border:2px solid;
+                                    background-color:#F8E8F8;
+                                }
                         }
                         #logo {
                             color:white;
@@ -41,5 +67,74 @@ body {
                             font-family:"comic sans ms";
                         }
                 }
+                #controls {
+                    display:flex;
+                    justify-content: space-between;
+                    margin-top:30px;
+                    align-items: center;
+                        #button-pad {
+                            display:flex;
+                            flex-wrap:wrap;
+                            width:93px;
+                            margin:10px;
+                                .button {
+                                    width:30px;
+                                    height:30px;
+                                    background-color:$black;
+                                    box-shadow:2px 2px $dark-red;
+                                }
+                                    #up {
+                                        border-top-left-radius: 8px;
+                                        border-top-right-radius: 8px;
+                                        border-right:1px $light-red solid;
+                                    }
+                                    #left {
+                                        border-top-left-radius: 8px;
+                                        border-bottom-left-radius: 8px;
+                                        border-bottom:1px $light-red solid;
+                                    }
+                                    #right {
+                                        border-top-right-radius: 8px;
+                                        border-bottom-right-radius: 8px;
+                                        border-right:1px $light-red solid;
+                                        border-bottom:1px $light-red solid;
+                                    }
+                                    #down {
+                                        border-bottom-left-radius: 8px;
+                                        border-bottom-right-radius: 8px;
+                                        border-right:1px $light-red solid;
+                                        border-bottom:1px $light-red solid;
+                                    }
+                                    #center {
+                                        border-bottom:1px $black solid;
+                                    }
+                                .empty {
+                                    width:30px;
+                                    height:30px;
+                                }
+                        }
+                        #container {
+                            display:flex;
+                            justify-content: space-between;
+                            width:100px;
+                            border-radius:30px;
+                            background-color:$other-red;
+                            padding:10px;
+                            height:40px;
+                            transform: rotate(-20deg);
+                            margin:10px;
+                                .ab-button {
+                                    width:40px;
+                                    height:40px;
+                                    border-radius:40px;
+                                    background-color:$black;
+                                    color:white;
+                                    font-family:Arial, Helvetica, sans-serif;
+                                    box-shadow:2px 2px $dark-red;
+                                    border-right:1px $light-red solid;
+                                }
+                                
+                        }
+                }
         }
-}
+}}

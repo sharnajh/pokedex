@@ -1,3 +1,8 @@
 // mew: http://pokeapi.co/api/v2/pokemon/151
 // gengar: http://pokeapi.co/api/v2/pokemon/94
 // sylveon: http://pokeapi.co/api/v2/pokemon/700
+
+let canvas = document.getElementById("canvas");
+let myHeight = window.innerHeight;
+console.log(`${myHeight}px`);
+canvas.style.height = `${myHeight}px`;
