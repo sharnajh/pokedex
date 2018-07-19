@@ -54,12 +54,38 @@ body {
             align-content: center; }
             body #canvas #gameboy #screen-wrapper #screen #start #start-button {
               margin: auto;
-              padding: 10px;
+              padding: 5px;
               font-size: 12px;
               border: 2px solid;
-              background-color: #F8E8F8; }
-            body #canvas #gameboy #screen-wrapper #screen #start #start-button:hover {
-              cursor: pointer; }
+              background-color: #F8E8F8;
+              cursor: pointer;
+              animation: bounce 1s infinite alternate;
+              -webkit-animation: bounce 1s infinite alternate; }
+@keyframes bounce {
+  from {
+    transform: translateY(0px); }
+  to {
+    transform: translateY(-10px); } }
+@-webkit-keyframes bounce {
+  from {
+    transform: translateY(0px); }
+  to {
+    transform: translateY(-10px); } }
+          body #canvas #gameboy #screen-wrapper #screen #trainer-card {
+            padding: 10px;
+            display: none;
+            text-align: center; }
+            body #canvas #gameboy #screen-wrapper #screen #trainer-card #t-exit {
+              z-index: 500;
+              position: absolute;
+              background-color: #FE1B53;
+              color: white;
+              padding: 5px;
+              cursor: pointer;
+              border-radius: 5px;
+              text-align: center; }
+            body #canvas #gameboy #screen-wrapper #screen #trainer-card #trainer {
+              width: 100px; }
           body #canvas #gameboy #screen-wrapper #screen #mew, body #canvas #gameboy #screen-wrapper #screen #gengar, body #canvas #gameboy #screen-wrapper #screen #clefairy {
             width: 240px;
             height: 230px;
@@ -72,12 +98,12 @@ body {
             body #canvas #gameboy #screen-wrapper #screen #mew #m-exit, body #canvas #gameboy #screen-wrapper #screen #mew #g-exit, body #canvas #gameboy #screen-wrapper #screen #mew #c-exit, body #canvas #gameboy #screen-wrapper #screen #gengar #m-exit, body #canvas #gameboy #screen-wrapper #screen #gengar #g-exit, body #canvas #gameboy #screen-wrapper #screen #gengar #c-exit, body #canvas #gameboy #screen-wrapper #screen #clefairy #m-exit, body #canvas #gameboy #screen-wrapper #screen #clefairy #g-exit, body #canvas #gameboy #screen-wrapper #screen #clefairy #c-exit {
               z-index: 500;
               position: absolute;
-              background-color: #FAEF61;
+              background-color: #FE1B53;
+              color: white;
               padding: 5px;
               cursor: pointer;
               border-radius: 5px;
-              text-align: center;
-              font-weight: bold; }
+              text-align: center; }
             body #canvas #gameboy #screen-wrapper #screen #mew .sprite, body #canvas #gameboy #screen-wrapper #screen #gengar .sprite, body #canvas #gameboy #screen-wrapper #screen #clefairy .sprite {
               width: auto;
               max-width: 150px;

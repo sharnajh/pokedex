@@ -44,7 +44,7 @@ body {
                     flex-direction:column;
                     justify-content:center;
                             #screen {
-                                background-color:#18D4F8;
+                                background-color:$blue;
                                 width: 240px;
                                 height:230px;
                                 margin:auto;
@@ -68,14 +68,48 @@ body {
                                         align-content:center;
                                         #start-button {
                                             margin:auto;
-                                            padding:10px;
+                                            padding:5px;
                                             font-size:12px;
                                             border:2px solid;
                                             background-color:#F8E8F8;
-                                        }
-                                            #start-button:hover {
-                                                    cursor: pointer;
+                                            cursor:pointer;
+                                            animation: bounce 1s infinite alternate;
+                                            -webkit-animation: bounce 1s infinite alternate;
+                                            }
+                                                @keyframes bounce {
+                                                from {
+                                                    transform: translateY(0px);
                                                 }
+                                                to {
+                                                    transform: translateY(-10px);
+                                                }
+                                                }
+                                                @-webkit-keyframes bounce {
+                                                from {
+                                                    transform: translateY(0px);
+                                                }
+                                                to {
+                                                    transform: translateY(-10px);
+                                                }
+                                                }
+                                    }
+                                    #trainer-card{
+                                        padding:10px;
+                                        display:none;
+                                        text-align:center;
+                                        #t-exit {
+                                            z-index:500;
+                                            position:absolute;
+                                            background-color:$red;
+                                            color:white;
+                                            padding:5px;
+                                            cursor:pointer;
+                                            border-radius:5px;
+                                            text-align:center;
+                                        }
+                                        #trainer {
+                                            width:100px;
+                                        }
                                     }
                                     #mew, #gengar, #clefairy {
                                         width:240px;
@@ -87,15 +121,15 @@ body {
                                             ul, li {
                                                 list-style-type: none;
                                             }
-                                            #m-exit, #g-exit, #c-exit {
+                                            #m-exit, #g-exit, #c-exit{
                                                 z-index:500;
                                                 position:absolute;
-                                                background-color:$yellow;
+                                                background-color:$red;
+                                                color:white;
                                                 padding:5px;
                                                 cursor:pointer;
                                                 border-radius:5px;
                                                 text-align:center;
-                                                font-weight: bold;
                                             }
                                             .sprite {
                                                 width: auto;

@@ -127,17 +127,22 @@ $( "#start-button" ).click(function() {
  });
 
  $( "#mew-select" ).click(function() {     
-    $('#mew').toggle("slow");
+    $('#mew').toggle("slide");
     $('#menu').toggle();
  });
 
  $( "#gengar-select" ).click(function() {     
-    $('#gengar').toggle("slow");
+    $('#gengar').toggle("slide");
     $('#menu').toggle();
  });
 
  $( "#clefairy-select" ).click(function() {     
-    $('#clefairy').toggle("slow");
+    $('#clefairy').toggle("slide");
+    $('#menu').toggle();
+ });
+
+ $( "#trainer-select" ).click(function() {     
+    $('#trainer-card').toggle("slow");
     $('#menu').toggle();
  });
 
@@ -153,5 +158,10 @@ $( "#start-button" ).click(function() {
 
  $( "#c-exit" ).click(function() {  
     $('#clefairy').toggle();  
+    $('#menu').toggle("slow");
+ });
+
+ $( "#t-exit" ).click(function() {  
+    $('#trainer-card').toggle();  
     $('#menu').toggle("slow");
  });
