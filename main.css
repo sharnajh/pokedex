@@ -64,12 +64,20 @@ body {
             width: 240px;
             height: 230px;
             background-color: #18D4F8;
-            display: flex;
-            flex-wrap: wrap;
             padding: 10px;
-            align-items: center;
             font-size: 12px;
             display: none; }
+            body #canvas #gameboy #screen-wrapper #screen #mew ul, body #canvas #gameboy #screen-wrapper #screen #mew li, body #canvas #gameboy #screen-wrapper #screen #gengar ul, body #canvas #gameboy #screen-wrapper #screen #gengar li, body #canvas #gameboy #screen-wrapper #screen #clefairy ul, body #canvas #gameboy #screen-wrapper #screen #clefairy li {
+              list-style-type: none; }
+            body #canvas #gameboy #screen-wrapper #screen #mew #m-exit, body #canvas #gameboy #screen-wrapper #screen #mew #g-exit, body #canvas #gameboy #screen-wrapper #screen #mew #c-exit, body #canvas #gameboy #screen-wrapper #screen #gengar #m-exit, body #canvas #gameboy #screen-wrapper #screen #gengar #g-exit, body #canvas #gameboy #screen-wrapper #screen #gengar #c-exit, body #canvas #gameboy #screen-wrapper #screen #clefairy #m-exit, body #canvas #gameboy #screen-wrapper #screen #clefairy #g-exit, body #canvas #gameboy #screen-wrapper #screen #clefairy #c-exit {
+              z-index: 500;
+              position: absolute;
+              background-color: #FAEF61;
+              padding: 5px;
+              cursor: pointer;
+              border-radius: 5px;
+              text-align: center;
+              font-weight: bold; }
             body #canvas #gameboy #screen-wrapper #screen #mew .sprite, body #canvas #gameboy #screen-wrapper #screen #gengar .sprite, body #canvas #gameboy #screen-wrapper #screen #clefairy .sprite {
               width: auto;
               max-width: 150px;

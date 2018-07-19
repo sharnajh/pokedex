@@ -81,12 +81,22 @@ body {
                                         width:240px;
                                         height:230px;
                                         background-color:$blue;
-                                        display:flex;
-                                        flex-wrap:wrap;
                                         padding:10px;
-                                        align-items:center;
                                         font-size:12px;
                                         display:none;
+                                            ul, li {
+                                                list-style-type: none;
+                                            }
+                                            #m-exit, #g-exit, #c-exit {
+                                                z-index:500;
+                                                position:absolute;
+                                                background-color:$yellow;
+                                                padding:5px;
+                                                cursor:pointer;
+                                                border-radius:5px;
+                                                text-align:center;
+                                                font-weight: bold;
+                                            }
                                             .sprite {
                                                 width: auto;
                                                 max-width: 150px;
@@ -102,7 +112,7 @@ body {
                                                 text-align: center;
                                             }
                                             .ability {
-                                                text-transform:capitalize;;
+                                                text-transform:capitalize;
                                             }
                                             #base-stats {
                                                     ul, li {
