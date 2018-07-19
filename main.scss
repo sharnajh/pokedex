@@ -43,72 +43,73 @@ body {
                     display:flex;
                     flex-direction:column;
                     justify-content:center;
-                        #screen {
-                            background-color:#18D4F8;
-                            background-image: url('red.gif');
-                            background-size:100%;
-                            width: 240px;
-                            height:230px;
-                            margin:auto;
-                            display:flex;
-                            justify-content: center;
-                            flex-direction: column;
-                            align-content:center;
-                            #mew, #gengar, #clefairy {
-                                width:240px;
+                            #screen {
+                                background-color:#18D4F8;
+                                width: 240px;
                                 height:230px;
-                                background-color:$blue;
-                                display:flex;
-                                flex-wrap:wrap;
-                                padding:10px;
-                                align-items:center;
-                                font-size:12px;
-                                    ul, li {
-                                        padding:0;
-                                        list-style: none;
+                                margin:auto;
+                                    #menu {
+                                        width:240px;
+                                        height:230px;
+                                        background-color:$blue;
+                                        display:none;
                                     }
-                                    .sprite {
-                                        width: auto;
-                                        max-width: 150px;
-                                        height: auto;
-                                        max-height: 100px;
-                                        margin:0;
-                                        background-color:$dark-blue;
-                                        border-radius:5px;
+                                        #menu:hover {
+                                            cursor:pointer;
+                                        }
+                                    #start {
+                                        width: 240px;
+                                        height:230px;
+                                        background-image: url('red.gif');
+                                        background-size:100%;
+                                        display:flex;
+                                        justify-content: center;
+                                        flex-direction: column;
+                                        align-content:center;
+                                        #start-button {
+                                            margin:auto;
+                                            padding:10px;
+                                            font-size:12px;
+                                            border:2px solid;
+                                            background-color:#F8E8F8;
+                                        }
+                                            #start-button:hover {
+                                                    cursor: pointer;
+                                                }
                                     }
-                                    .pkmn-name, .id {
-                                        font-size:17px;
-                                        text-transform:uppercase;
-                                        background-color:$dark-blue;
-                                        border-radius:5px;
-                                        padding:5px;
-                                        margin:10px;
-                                        width: 100px;
-                                        text-align: center;
-                                    }
-                                    .ability {
-                                        text-transform:capitalize;
-                                        background-color:$dark-blue;
-                                        border-radius:5px;
-                                        padding:5px;
-                                    }
-                                    #base-stats {
-                                            li {
-                                                background-color:$dark-blue;
-                                                border-radius:5px; 
+                                    #mew, #gengar, #clefairy {
+                                        width:240px;
+                                        height:230px;
+                                        background-color:$blue;
+                                        display:flex;
+                                        flex-wrap:wrap;
+                                        padding:10px;
+                                        align-items:center;
+                                        font-size:12px;
+                                        display:none;
+                                            .sprite {
+                                                width: auto;
+                                                max-width: 150px;
+                                                height: auto;
+                                                max-height: 100px;
+                                                margin:0;
                                             }
-                                    }
+                                            .pkmn-name, .id {
+                                                font-size:17px;
+                                                text-transform:uppercase;
+                                                margin:10px;
+                                                width: 100px;
+                                                text-align: center;
+                                            }
+                                            .ability {
+                                                text-transform:capitalize;;
+                                            }
+                                            #base-stats {
+                                                    ul, li {
+                                                        list-style: none;
+                                                    }
+                                            }
                             }
-                                #start-button {
-                                    margin:auto;
-                                    padding:10px;
-                                    font-size:12px;
-                                    border:2px solid;
-                                    background-color:#F8E8F8;
-                                }
-                                #start-button:hover {
-                                    cursor: pointer;
-                                }
                         }
                         #logo {
                             color:white;
@@ -170,7 +171,7 @@ body {
                         #ab-container {
                             display:flex;
                             justify-content: space-between;
-                            width:115px;
+                            width:120px;
                             border-radius:30px;
                             background-color:$other-red;
                             padding:10px;

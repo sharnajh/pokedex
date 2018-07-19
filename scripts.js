@@ -88,8 +88,12 @@ axios.get('https://pokeapi-nycda.firebaseio.com/pokemon/35.json').then((response
     `)
 });
 
-$(document).ready(function(){
-    $("#start-button").click(function(){
-        $("#mew").show();
-    });
-});
+$( "#start-button" ).click(function() {     
+    $('#menu').toggle("slow");
+    $('#start').toggle();
+ });
+
+ $( "#pokedex-select" ).click(function() {     
+    $('#mew').toggle("slow");
+    $('#menu').toggle();
+ });
