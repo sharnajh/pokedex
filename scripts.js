@@ -8,24 +8,43 @@ let start = document.getElementById("start-button");
 
 canvas.style.height = `${myHeight}px`;
 
+let mewDiv = document.getElementById("mew"),
+gengarDiv = document.getElementById("gengar"),
+clefairyDiv = document.getElementById("clefairy");
 
-let mew = document.getElementById("mew"),
-gengar = document.getElementById("gengar"),
-clefairy = document.getElementById("clefairy");
+let Red = {
+    all() {
+        return 
+    },
+    get(name) {
+        axios.get(`https://pokeapi-nycda.firebaseio.com/pokemon/${name}.json`).then((response) => {
+        let pkmn = response.data;
+        let name = pkmn.name;
+        let sprite = pkmn.sprites.front_default;
+        let id = pkmn.game_indices[0].game_index;
+        let ability = pkmn.abilities[0].ability.name;
+        let hp = pkmn.stats[5].base_stat;
+        let attk = pkmn.stats[4].base_stat;
+        let def = pkmn.stats[3].base_stat;
+        console.log(pkmn);
+    })
+}
+};
 
 // mew vars
 axios.get('https://pokeapi-nycda.firebaseio.com/pokemon/151.json').then((response) => {
-    let mewData = response.data;
-    let mewName = mewData.name;
-    let mewSprite = mewData.sprites.front_default;
-    let mewId = mewData.game_indices[0].game_index;
-    let mewAbility = mewData.abilities[0].ability.name;
-    let mewHp = mewData.stats[5].base_stat;
-    let mewAttk = mewData.stats[4].base_stat;
-    let mewDef = mewData.stats[3].base_stat;
-    console.log(mewData);
+    let mew = response.data;
+    let mewName = mew.name;
+    let mewSprite = mew.sprites.front_default;
+    let mewId = mew.game_indices[0].game_index;
+    let mewAbility = mew.abilities[0].ability.name;
+    let mewHp = mew.stats[5].base_stat;
+    let mewAttk = mew.stats[4].base_stat;
+    let mewDef = mew.stats[3].base_stat;
+    console.log(mew);
 
-    mew.insertAdjacentHTML('beforeend',`
+    // bootstrap grid system
+    mewDiv.insertAdjacentHTML('beforeend',`
     <div class="container">
     <div class="row">
         <div class="col-sm-2"><img class="sprite" src="${mewSprite}"></div>
@@ -51,17 +70,18 @@ axios.get('https://pokeapi-nycda.firebaseio.com/pokemon/151.json').then((respons
 
 // gengar vars
 axios.get('https://pokeapi-nycda.firebaseio.com/pokemon/94.json').then((response) => {
-    let gengarData = response.data;
-    let gengarName = gengarData.name;
-    let gengarSprite = gengarData.sprites.front_default;
-    let gengarId = gengarData.game_indices[0].game_index;
-    let gengarAbility = gengarData.abilities[0].ability.name;
-    let gengarHp = gengarData.stats[5].base_stat;
-    let gengarAttk = gengarData.stats[4].base_stat;
-    let gengarDef = gengarData.stats[3].base_stat;
-    console.log(gengarData);
+    let gengar = response.data;
+    let gengarName = gengar.name;
+    let gengarSprite = gengar.sprites.front_default;
+    let gengarId = gengar.game_indices[0].game_index;
+    let gengarAbility = gengar.abilities[0].ability.name;
+    let gengarHp = gengar.stats[5].base_stat;
+    let gengarAttk = gengar.stats[4].base_stat;
+    let gengarDef = gengar.stats[3].base_stat;
+    console.log(gengar);
 
-    gengar.insertAdjacentHTML('beforeend',`
+    // bootstrap grid system
+    gengarDiv.insertAdjacentHTML('beforeend',`
     <div class="container">
     <div class="row">
         <div class="col-sm-2"><img class="sprite" src="${gengarSprite}"></div>
@@ -88,17 +108,18 @@ axios.get('https://pokeapi-nycda.firebaseio.com/pokemon/94.json').then((response
 
 // clefaity vars
 axios.get('https://pokeapi-nycda.firebaseio.com/pokemon/35.json').then((response) => {
-    let clefData = response.data;
-    let clefName = clefData.name;
-    let clefSprite = clefData.sprites.front_default;
-    let clefId = clefData.game_indices[0].game_index;
-    let clefAbility = clefData.abilities[0].ability.name;
-    let clefHp = clefData.stats[5].base_stat;
-    let clefAttk = clefData.stats[4].base_stat;
-    let clefDef = clefData.stats[3].base_stat;
-    console.log(clefData);
+    let clefairy = response.data;
+    let clefName = clefairy.name;
+    let clefSprite = clefairy.sprites.front_default;
+    let clefId = clefairy.game_indices[0].game_index;
+    let clefAbility = clefairy.abilities[0].ability.name;
+    let clefHp = clefairy.stats[5].base_stat;
+    let clefAttk = clefairy.stats[4].base_stat;
+    let clefDef = clefairy.stats[3].base_stat;
+    console.log(clefairy);
 
-    clefairy.insertAdjacentHTML('beforeend',`
+    // bootstrap grid system
+    clefairyDiv.insertAdjacentHTML('beforeend',`
     <div class="container">
     <div class="row">
         <div class="col-sm-2"><img class="sprite" src="${clefSprite}"></div>
