@@ -23,9 +23,11 @@ body {
         display:flex;
         justify-content: center;
         align-items: center;
+        height:100vh;
         #gameboy {
             width:360px;
             height:580px;
+            top:50vh;
             padding:15px;
             background-color:$red;
             border-radius:20px;
@@ -234,8 +236,8 @@ body {
                                 .ab-button:hover {
                                     cursor: pointer;
                                 }
-                                
                         }
+                        
                 }
         }
 }
