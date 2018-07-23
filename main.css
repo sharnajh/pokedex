@@ -10,10 +10,12 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    height: 100vh; }
     body #canvas #gameboy {
       width: 360px;
       height: 580px;
+      top: 50vh;
       padding: 15px;
       background-color: #FE1B53;
       border-radius: 20px;

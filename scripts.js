@@ -3,33 +3,27 @@
 // clefairy: https://pokeapi-nycda.firebaseio.com/pokemon/35.json
 
 let canvas = document.getElementById("canvas");
-let myHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 let start = document.getElementById("start-button");
-
-canvas.style.height = `${myHeight}px`;
 
 let mewDiv = document.getElementById("mew"),
 gengarDiv = document.getElementById("gengar"),
 clefairyDiv = document.getElementById("clefairy");
 
 let Red = {
-    all() {
-        return 
-    },
-    get(name) {
-        axios.get(`https://pokeapi-nycda.firebaseio.com/pokemon/${name}.json`).then((response) => {
-        let pkmn = response.data;
-        let name = pkmn.name;
-        let sprite = pkmn.sprites.front_default;
-        let id = pkmn.game_indices[0].game_index;
-        let ability = pkmn.abilities[0].ability.name;
-        let hp = pkmn.stats[5].base_stat;
-        let attk = pkmn.stats[4].base_stat;
-        let def = pkmn.stats[3].base_stat;
-        console.log(pkmn);
-    })
+    team : [
+        gengar = {
+            
+        },
+        mew = {
+
+        },
+        clefairy = {
+
+        }
+    ]
 }
-};
+
+console.log(Red.team);
 
 // mew vars
 axios.get('https://pokeapi-nycda.firebaseio.com/pokemon/151.json').then((response) => {
