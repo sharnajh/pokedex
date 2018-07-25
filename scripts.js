@@ -2,7 +2,6 @@
 // gengar: https://pokeapi-nycda.firebaseio.com/pokemon/94.json
 // clefairy: https://pokeapi-nycda.firebaseio.com/pokemon/35.json
 
-let canvas = document.getElementById("canvas");
 let start = document.getElementById("start-button");
 
 let mewDiv = document.getElementById("mew"),
