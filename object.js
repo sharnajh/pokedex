@@ -1,3 +1,5 @@
+
+
 class Pokemon {
     constructor(pokemonName,id,sprite,ability,attk,def,hp) {
         this.pokemonData = {
@@ -54,6 +56,5 @@ red.add(94)
 red.add(35)
 red.all()
 
-// I would manipulate the pkmn data stored in the new instances of Pokemon created in the add method from Trainer class
-// red.pokemonTeam[0].pokemonData.name_of_pkmn
 
+   
