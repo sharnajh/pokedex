@@ -120,3 +120,47 @@ axios.get('https://pokeapi.co/api/v2/pokemon/35/').then((response) => {
     `)
 });
 
+$( "#start-button" ).click(function() {     
+    $('#menu').toggle("slow");
+    $('#start').toggle();
+ });
+
+ $( "#mew-select" ).click(function() {     
+    $('#mew').toggle("slide");
+    $('#menu').toggle();
+ });
+
+ $( "#gengar-select" ).click(function() {     
+    $('#gengar').toggle("slide");
+    $('#menu').toggle();
+ });
+
+ $( "#clefairy-select" ).click(function() {     
+    $('#clefairy').toggle("slide");
+    $('#menu').toggle();
+ });
+
+ $( "#trainer-select" ).click(function() {     
+    $('#trainer-card').toggle("slow");
+    $('#menu').toggle();
+ });
+
+ $( "#m-exit" ).click(function() {  
+    $('#mew').toggle();  
+    $('#menu').toggle("slow");
+ });
+
+ $( "#g-exit" ).click(function() {  
+    $('#gengar').toggle();  
+    $('#menu').toggle("slow");
+ });
+
+ $( "#c-exit" ).click(function() {  
+    $('#clefairy').toggle();  
+    $('#menu').toggle("slow");
+ });
+
+ $( "#t-exit" ).click(function() {  
+    $('#trainer-card').toggle();  
+    $('#menu').toggle("slow");
+ });
