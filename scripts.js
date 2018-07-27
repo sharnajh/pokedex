@@ -3,29 +3,13 @@
 // clefairy: https://pokeapi-nycda.firebaseio.com/pokemon/35.json
 
 let start = document.getElementById("start-button");
-
 let mewDiv = document.getElementById("mew"),
 gengarDiv = document.getElementById("gengar"),
 clefairyDiv = document.getElementById("clefairy");
 
-let Red = {
-    team : [
-        gengar = {
-            
-        },
-        mew = {
-
-        },
-        clefairy = {
-
-        }
-    ]
-}
-
-console.log(Red.team);
 
 // mew vars
-axios.get('https://pokeapi-nycda.firebaseio.com/pokemon/151.json').then((response) => {
+axios.get('https://pokeapi.co/api/v2/pokemon/151/').then((response) => {
     let mew = response.data;
     let mewName = mew.name;
     let mewSprite = mew.sprites.front_default;
@@ -62,7 +46,7 @@ axios.get('https://pokeapi-nycda.firebaseio.com/pokemon/151.json').then((respons
 
 
 // gengar vars
-axios.get('https://pokeapi-nycda.firebaseio.com/pokemon/94.json').then((response) => {
+axios.get('https://pokeapi.co/api/v2/pokemon/94/').then((response) => {
     let gengar = response.data;
     let gengarName = gengar.name;
     let gengarSprite = gengar.sprites.front_default;
@@ -100,7 +84,7 @@ axios.get('https://pokeapi-nycda.firebaseio.com/pokemon/94.json').then((response
 
 
 // clefaity vars
-axios.get('https://pokeapi-nycda.firebaseio.com/pokemon/35.json').then((response) => {
+axios.get('https://pokeapi.co/api/v2/pokemon/35/').then((response) => {
     let clefairy = response.data;
     let clefName = clefairy.name;
     let clefSprite = clefairy.sprites.front_default;
@@ -135,47 +119,3 @@ axios.get('https://pokeapi-nycda.firebaseio.com/pokemon/35.json').then((response
     `)
 });
 
-$( "#start-button" ).click(function() {     
-    $('#menu').toggle("slow");
-    $('#start').toggle();
- });
-
- $( "#mew-select" ).click(function() {     
-    $('#mew').toggle("slide");
-    $('#menu').toggle();
- });
-
- $( "#gengar-select" ).click(function() {     
-    $('#gengar').toggle("slide");
-    $('#menu').toggle();
- });
-
- $( "#clefairy-select" ).click(function() {     
-    $('#clefairy').toggle("slide");
-    $('#menu').toggle();
- });
-
- $( "#trainer-select" ).click(function() {     
-    $('#trainer-card').toggle("slow");
-    $('#menu').toggle();
- });
-
- $( "#m-exit" ).click(function() {  
-    $('#mew').toggle();  
-    $('#menu').toggle("slow");
- });
-
- $( "#g-exit" ).click(function() {  
-    $('#gengar').toggle();  
-    $('#menu').toggle("slow");
- });
-
- $( "#c-exit" ).click(function() {  
-    $('#clefairy').toggle();  
-    $('#menu').toggle("slow");
- });
-
- $( "#t-exit" ).click(function() {  
-    $('#trainer-card').toggle();  
-    $('#menu').toggle("slow");
- });
