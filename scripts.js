@@ -3,6 +3,7 @@
 // clefairy: https://pokeapi-nycda.firebaseio.com/pokemon/35.json
 
 let start = document.getElementById("start-button");
+
 let mewDiv = document.getElementById("mew"),
 gengarDiv = document.getElementById("gengar"),
 clefairyDiv = document.getElementById("clefairy");
