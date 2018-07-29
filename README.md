@@ -1,2 +1,4 @@
 # Personal Pokedex
-Project website in which I use Pokemon API to highlight three Pokemon for my own personal Pokedex. 
+![Homepage Screenshot](/images/screenshot.png)
+Personal Pokedex website that features three pokemon by pulling data from [The RESTful Pokemon API](https://pokeapi.co/) with axios.
+
