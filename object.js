@@ -1,5 +1,3 @@
-
-
 class Pokemon {
     constructor(pokemonName,id,sprite,ability,attk,def,hp) {
         this.pokemonData = {
@@ -38,7 +36,7 @@ class Trainer {
                     let attk = data.stats[4].base_stat;
                     let def = data.stats[3].base_stat;
                     // it does get pushed into pokemonTeam but console.log prints too fast for api sometimes
-                    // or api just doesn't work at all
+                    // or api just doesn't work at all.
                     this.pokemonTeam.push(new Pokemon(name,id,sprite,ability,attk,def,hp))
                 });
         }
@@ -55,6 +53,7 @@ red.add(151)
 red.add(94)
 red.add(35)
 red.all()
-
+//sometimes the pokemon objects don't load fast enough to get pushed in
+//before .all() prints the pokemonTeam array.
 
    

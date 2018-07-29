@@ -19,7 +19,6 @@ axios.get('https://pokeapi.co/api/v2/pokemon/151/').then((response) => {
     let mewHp = mew.stats[5].base_stat;
     let mewAttk = mew.stats[4].base_stat;
     let mewDef = mew.stats[3].base_stat;
-    console.log(mew);
 
     // bootstrap grid system
     mewDiv.insertAdjacentHTML('beforeend',`
@@ -56,7 +55,6 @@ axios.get('https://pokeapi.co/api/v2/pokemon/94/').then((response) => {
     let gengarHp = gengar.stats[5].base_stat;
     let gengarAttk = gengar.stats[4].base_stat;
     let gengarDef = gengar.stats[3].base_stat;
-    console.log(gengar);
 
     // bootstrap grid system
     gengarDiv.insertAdjacentHTML('beforeend',`
@@ -94,7 +92,6 @@ axios.get('https://pokeapi.co/api/v2/pokemon/35/').then((response) => {
     let clefHp = clefairy.stats[5].base_stat;
     let clefAttk = clefairy.stats[4].base_stat;
     let clefDef = clefairy.stats[3].base_stat;
-    console.log(clefairy);
 
     // bootstrap grid system
     clefairyDiv.insertAdjacentHTML('beforeend',`
